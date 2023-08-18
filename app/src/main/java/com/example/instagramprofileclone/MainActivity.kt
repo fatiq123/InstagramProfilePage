@@ -29,8 +29,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.instagramprofileclone.classes.Screen
+import com.example.instagramprofileclone.classes.SettingsScreen
 import com.example.instagramprofileclone.components.InstagramBottomNavBar
 import com.example.instagramprofileclone.components.NavGraph
+import com.example.instagramprofileclone.components.SettingsScreen
 import com.example.instagramprofileclone.ui.theme.InstagramProfileCloneTheme
 
 class MainActivity : ComponentActivity() {
@@ -43,8 +48,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    val navController = rememberNavController()
 //                    InstagramProfileApp()
-                    InstagramProfilePage(name = "fatiqhussnain")
+                    InstagramProfilePage(name = "fatiqhussnain", navController = navController)
 //                    NavGraph()
                 }
             }
@@ -55,7 +61,7 @@ class MainActivity : ComponentActivity() {
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun InstagramProfilePage(name: String) {
+fun InstagramProfilePage(navController: NavController, name: String) {
 
     val scaffoldState = rememberScaffoldState()
     val coroutineScope = rememberCoroutineScope()
@@ -88,7 +94,9 @@ fun InstagramProfilePage(name: String) {
                             .weight(1f)
                     )
                     IconButton(
-                        onClick = { /* Handle settings or other actions */ }
+                        onClick = {
+                        /*navController.navigate(SettingsScreen.Settings.route)*/
+                        }
                     ) {
                         Icon(Icons.Default.Settings, contentDescription = null)
                     }
@@ -108,6 +116,6 @@ fun InstagramProfilePage(name: String) {
 @Composable
 fun GreetingPreview() {
     InstagramProfileCloneTheme {
-        InstagramProfilePage("fatiqhussnain")
+//        InstagramProfilePage("fatiqhussnain")
     }
 }

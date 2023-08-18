@@ -6,6 +6,7 @@ import androidx.compose.material.icons.outlined.AddCircleOutline
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class Screen(val route: String, val title: String, val image: ImageVector) {
@@ -15,5 +16,6 @@ sealed class Screen(val route: String, val title: String, val image: ImageVector
     object Add: Screen("add", "Add", Icons.Outlined.AddCircleOutline)
     object Likes: Screen("like", "Likes", Icons.Outlined.FavoriteBorder)
     object Profile: Screen("profile", "Profile", Icons.Outlined.AccountCircle)
+
 
 }

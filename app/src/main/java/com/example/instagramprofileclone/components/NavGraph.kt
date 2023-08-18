@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.instagramprofileclone.classes.Screen
+import com.example.instagramprofileclone.classes.SettingsScreen
 
 @Composable
 fun NavGraph(startDestination: String = Screen.Home.route) {
@@ -16,6 +17,9 @@ fun NavGraph(startDestination: String = Screen.Home.route) {
         composable(Screen.Add.route) { /* Add Composable */ }
         composable(Screen.Likes.route) { /* Likes Composable */ }
         composable(Screen.Profile.route) { /* Profile Composable */ }
+        composable(SettingsScreen.Settings.route) {
+            SettingsScreen(navController = navController)
+        }
     }
 
     InstagramBottomNavBar(navController)
