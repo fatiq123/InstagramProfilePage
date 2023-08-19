@@ -95,7 +95,7 @@ fun InstagramProfilePage(navController: NavController, name: String) {
                     )
                     IconButton(
                         onClick = {
-                        /*navController.navigate(SettingsScreen.Settings.route)*/
+                            /*navController.navigate(SettingsScreen.Settings.route)*/
                         }
                     ) {
                         Icon(Icons.Default.Settings, contentDescription = null)
