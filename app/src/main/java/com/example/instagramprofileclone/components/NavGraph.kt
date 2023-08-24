@@ -22,5 +22,6 @@ fun NavGraph(startDestination: String = Screen.Home.route) {
         }
     }
 
+
     InstagramBottomNavBar(navController)
 }
