@@ -48,10 +48,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val navController = rememberNavController()
-//                    InstagramProfileApp()
-                    InstagramProfilePage(name = "fatiqhussnain", navController = navController)
-//                    NavGraph()
+//                    val navController = rememberNavController()
+////                    InstagramProfileApp()
+//                    InstagramProfilePage(name = "fatiqhussnain", navController = navController)
+////                    NavGraph()
+                    Card()
                 }
             }
         }
